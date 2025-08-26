@@ -7,9 +7,10 @@ client = OpenAI(
 api_key=API_KEY
 )
 
+prompt = input("enter your prompt: ")
 response = client.responses.create(
-  model="gpt-4o-mini",
-  input="write a haiku about ai",
+  model="gpt-3.5-turbo",
+  input=prompt,
   store=True,
 )
 
